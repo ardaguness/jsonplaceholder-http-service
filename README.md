@@ -1,6 +1,7 @@
 ## features
 
 - Http usage
+- Lazy Loading Scroll View
 - Json placeholder usage
 - simple mvvm usage
 ##
