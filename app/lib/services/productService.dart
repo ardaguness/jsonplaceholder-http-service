@@ -12,6 +12,12 @@ class ProductService {
     return (response as List<dynamic>).map((json) => Product.fromJson(json)).toList();
   }
 
+Future<List<Product>> getPaginationList(int skip, int take) async {
+  final response = await apiService.get('posts?_start=$skip&_limit=$take');
+  return (response as List<dynamic>).map((json) => Product.fromJson(json)).toList();
+}
+
+
   Future<Product> getProductById(int id) async {
     final response = await apiService.get('posts/$id');
     return Product.fromJson(response);
